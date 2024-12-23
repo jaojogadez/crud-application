@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-br" data-theme-bs="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CRUD App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  </head>
+  <body class="bg-dark text-light">
+    <div class="container col-9 mt-5">
+        <div class="text-center">
+            <h1 class="display-4">CRUD Application</h1>
+        </div>
+        <button 
+            type="button" 
+            class="btn btn-primary px-5 mt-4" 
+            data-bs-toggle="modal" 
+            data-bs-target="#staticBackdrop"
+            >
+            Add Person
+        </button>
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Add new Person</h1>
+                  <button type="button" class="btn-close text-light " data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-dark">
+                    <form action="" method="post">
+                        <div class="form-floating mb-3">
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="name"
+                                placeholder="name@example.com"
+                                autocomplete="name"
+                                >
+                            <label for="floatingInput">First Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="email"
+                                placeholder="name@example.com"
+                                autocomplete="email"
+                                >
+                            <label for="floatingInput">Email address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="status"
+                                placeholder="age"
+                                autocomplete="off"
+                                >
+                            <label for="floatingInput">Status</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-success">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="main row gx-1 text-dark mt-4">
+            
+            <div class="container-sm">
+                <table class="table table-dark table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Email address</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody class="student-list"> 
+                      <tr>
+                        <th scope="row">João</th>
+                        <td>jao@email.com</td>
+                        <td>Progammer</td>
+                        <td>
+                            <a href="" class="btn btn-warning btn-sm edit">Edit</a>
+                            <a href="" class="btn btn-danger btn-sm delete">Delete</a>
+                        </td>
+                      </tr>
+                      
+                  </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
